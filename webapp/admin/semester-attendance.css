@@ -1,0 +1,478 @@
+@charset "ISO-8859-1";
+  @media screen and (min-width: 1000px) and (max-width: 2000px)
+            {  
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        #header {
+            background-color: whitesmoke;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 98%;
+            flex-shrink: 0;
+            color: #1e272e;
+        }
+        #logo {
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+        #logo img {
+            max-width: 250px;
+            max-height: 100px;
+        }
+        #date-time {
+            padding-right: 20px;
+        }
+        .main {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            position: relative;
+        }
+        .sidebar {
+            background-color: #e1d9d9;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 200px;
+            flex-shrink: 0;
+            border-radius: 10px;
+        }
+        .pages {
+            margin-bottom: 10px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: whitesmoke;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+            font-weight: 500;
+            color: black;
+            text-decoration: none;
+        }
+        .pages:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+        .pages.active {
+            background-color: whitesmoke;
+            color: black;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .attendance-table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size:14px;
+        }
+        .attendance-table th, .attendance-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .attendance-table th {
+            background-color: #F2613F;
+            color: #1e272e;
+        }
+        .attendance-table td {
+            color: #333;
+        }
+        #header #date-time {
+            width: 15%;
+            height: 90px;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-weight: bolder;
+            font-size:20px;
+        }
+    }
+        @media screen and (min-width: 800px) and (max-width: 1000px)
+            {  
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        #header {
+            background-color: whitesmoke;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 95%;
+            flex-shrink: 0;
+            color: #1e272e;
+        }
+        #logo {
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+        #logo img {
+            max-width: 250px;
+            max-height: 100px;
+        }
+        #date-time {
+            padding-right: 20px;
+        }
+        .main {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            position: relative;
+        }
+        .sidebar {
+            background-color: #e1d9d9;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 200px;
+            flex-shrink: 0;
+            border-radius: 10px;
+        }
+        .pages {
+            margin-bottom: 10px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: whitesmoke;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+            font-weight: 500;
+            color: black;
+            text-decoration: none;
+        }
+        .pages:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+        .pages.active {
+            background-color: whitesmoke;
+            color: black;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .attendance-table {
+            width:100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size:12px;
+        }
+        .attendance-table th, .attendance-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .attendance-table th {
+            background-color: #F2613F;
+            color: #1e272e;
+        }
+        .attendance-table td {
+            color: #333;
+        }
+        #header #date-time {
+            width: 15%;
+            height: 90px;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-weight: bolder;
+            font-size:15px;
+        }
+    }
+    @media screen and (min-width: 500px) and (max-width: 799px)
+            {  
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        #header {
+            background-color: whitesmoke;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 95%;
+            flex-shrink: 0;
+            color: #1e272e;
+        }
+        #logo {
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+        #logo img {
+            max-width: 250px;
+            max-height: 100px;
+        }
+        #date-time {
+            padding-right: 20px;
+        }
+        .main {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            position: relative;
+        }
+        .sidebar {
+            background-color: #e1d9d9;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 200px;
+            flex-shrink: 0;
+            border-radius: 10px;
+        }
+        .pages {
+            margin-bottom: 10px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: whitesmoke;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+            font-weight: 500;
+            color: black;
+            text-decoration: none;
+        }
+        .pages:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+        .pages.active {
+            background-color: whitesmoke;
+            color: black;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            /* background-color:#F2613F; */
+        }
+        .attendance-table {
+            width:100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size:12px;
+        }
+        .attendance-table th, .attendance-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .attendance-table th {
+            background-color: #F2613F;
+            color: #1e272e;
+        }
+        .attendance-table td {
+            color: #333;
+        }
+        #header #date-time {
+            width: 25%;
+            height: 90px;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-weight: bolder;
+            font-size:15px;
+        }
+        .main {
+                flex-direction: column;
+            }
+            .sidebar {
+                flex-direction: row;
+                width: 92%;
+                height: auto;
+            }
+            .pages {
+                width: auto;
+                margin-right: 10px;
+                margin-bottom: 0;
+            }
+    }
+    
+    @media screen and (min-width: 300px) and (max-width: 499px)
+            {  
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        #header {
+            background-color: whitesmoke;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 95%;
+            flex-shrink: 0;
+            color: #1e272e;
+        }
+        #logo {
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+        #logo img {
+            max-width: 220px;
+            max-height: 100px;
+        }
+        #date-time {
+            padding-right: 20px;
+        }
+        .main {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            position: relative;
+        }
+        .sidebar {
+            background-color: #e1d9d9;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 200px;
+            flex-shrink: 0;
+            border-radius: 10px;
+        }
+        .pages {
+            margin-bottom: 10px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: whitesmoke;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+            font-weight: 500;
+            color: black;
+            text-decoration: none;
+        }
+        .pages:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+        .pages.active {
+            background-color: whitesmoke;
+            color: black;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            /* background-color:#F2613F; */
+        }
+        .attendance-table {
+            width:100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size:12px;
+        }
+        .attendance-table th, .attendance-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .attendance-table th {
+            background-color: #F2613F;
+            color: #1e272e;
+        }
+        .attendance-table td {
+            color: #333;
+        }
+        #header #date-time {
+            width: 25%;
+            height: 90px;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-weight: bolder;
+            font-size:13px;
+        }
+        .main {
+                flex-direction: column;
+            }
+            .sidebar {
+                flex-direction: row;
+                width: 92%;
+                height: auto;
+            }
+            .pages {
+                width: auto;
+                margin-right: 10px;
+                margin-bottom: 0;
+            }
+    }

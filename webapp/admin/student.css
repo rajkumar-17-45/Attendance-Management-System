@@ -1,0 +1,913 @@
+@charset "ISO-8859-1";
+  @media screen and (min-width:1000px) and (max-width:2000px)
+         {
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            /* color: #e1d9d9; */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        #header {
+            background-color: whitesmoke;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 98%;
+            flex-shrink: 0;
+            color: #1e272e;
+        }
+        #logo {
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+        #logo img {
+            max-width: 250px;
+            max-height: 100px;
+        }
+        #date-time {
+            padding-right: 20px;
+        }
+        .main {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            position: relative;
+        }
+        .sidebar {
+            background-color: #e1d9d9;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 200px;
+            flex-shrink: 0;
+            border-radius: 10px;
+        }
+        .pages {
+            margin-bottom: 10px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: whitesmoke;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+            font-weight: 500;
+            color: black;
+            text-decoration: none;
+        }
+        .pages:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+        .pages.active {
+            background-color: whitesmoke;
+            color: black;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            overflow-x: hidden;
+            background-image: url("https://img.freepik.com/free-vector/businessman-planning-events-deadlines-agenda_74855-6274.jpg");
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: contain;
+        }
+        .option-box {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 200px;
+            padding: 10px;
+            background-color: #F2613F;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #FFFFFF;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .option-box i {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        .option-box:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+        .footer {
+            background-color: whitesmoke;
+            color: black;
+            text-align: center;
+            padding: 20px 10px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: 500;
+        }
+        #header #date-time {
+            width: 15%;
+            height: 90px;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-weight: bolder;
+            font-size:20px;
+        }
+        /* Media queries for responsiveness */
+        @media screen and (max-width: 768px) {
+            .main {
+                flex-direction: column;
+            }
+            .sidebar {
+                flex-direction: row;
+                width: 100%;
+                height: auto;
+            }
+            .pages {
+                width: auto;
+                margin-right: 10px;
+                margin-bottom: 0;
+            }
+            .content {
+                align-items: center;
+                text-align: center;
+            }
+            .option-box {
+                width: 80%;
+            }
+            .student-form {
+                width: 80%; /* Adjust width for responsiveness */
+            }
+        }
+        /* CSS for Student Addition Form */
+        .student-form {
+            display: none;
+            flex-direction: column;
+            background-color: whitesmoke;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            width: 300px; /* Full width for desktop */
+            position: absolute; /* Positioning to the right */
+            right: 20px; /* Adjust as needed */
+            top: 0; /* Position from the top */
+            max-height:40vh;
+            overflow-y: scroll;
+        }
+
+        .student-form label {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #1e272e;
+        }
+
+        .student-form input[type="text"],
+        .student-form input[type="email"],
+        .student-form input[type="date"],
+        .student-form select {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: calc(100% - 20px); /* Full width minus padding */
+            box-sizing: border-box;
+        }
+
+        .student-form select {
+            width: 100%; /* Adjust width for select boxes */
+        }
+
+        .student-form .gender {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .student-form .gender label {
+            margin-right: 10px;
+        }
+
+        .student-form .btn-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%; /* Full width */
+        }
+
+        .student-form button {
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #F2613F;
+            color: #FFFFFF;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            padding: 10px;
+            width: 45%; /* Adjusted width for buttons */
+            text-align: center;
+        }
+
+        .student-form button:hover {
+            background-color: #0056b3;
+        }
+    }
+    @media screen and (min-width:800px) and (max-width:1000px)
+         {
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            /* color: #e1d9d9; */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        #header {
+            background-color: whitesmoke;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 95%;
+            flex-shrink: 0;
+            color: #1e272e;
+        }
+        #logo {
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+        #logo img {
+            max-width: 250px;
+            max-height: 100px;
+        }
+        #date-time {
+            padding-right: 20px;
+        }
+        .main {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            position: relative;
+        }
+        .sidebar {
+            background-color: #e1d9d9;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 200px;
+            flex-shrink: 0;
+            border-radius: 10px;
+        }
+        .pages {
+            margin-bottom: 10px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: whitesmoke;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+            font-weight: 500;
+            color: black;
+            text-decoration: none;
+        }
+        .pages:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+        .pages.active {
+            background-color: whitesmoke;
+            color: black;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            overflow-x: hidden;
+            background-image: url("https://img.freepik.com/free-vector/businessman-planning-events-deadlines-agenda_74855-6274.jpg");
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: contain;
+        }
+        .option-box {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 110px;
+            padding: 10px;
+            background-color: #F2613F;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #FFFFFF;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .option-box i {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        .option-box:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+        .footer {
+            background-color: whitesmoke;
+            color: black;
+            text-align: center;
+            padding: 20px 10px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: 500;
+        }
+        #header #date-time {
+            width: 15%;
+            height: 90px;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-weight: bolder;
+            font-size:20px;
+        }
+        /* Media queries for responsiveness */
+        @media screen and (max-width: 768px) {
+            .main {
+                flex-direction: column;
+            }
+            .sidebar {
+                flex-direction: row;
+                width: 100%;
+                height: auto;
+            }
+            .pages {
+                width: auto;
+                margin-right: 10px;
+                margin-bottom: 0;
+            }
+            .content {
+                align-items: center;
+                text-align: center;
+            }
+            .option-box {
+                width: 80%;
+            }
+            .student-form {
+                width: 80%; /* Adjust width for responsiveness */
+            }
+        }
+        /* CSS for Student Addition Form */
+        .student-form {
+            display: none;
+            flex-direction: column;
+            background-color: whitesmoke;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            width: 300px; /* Full width for desktop */
+            position: absolute; /* Positioning to the right */
+            right: 20px; /* Adjust as needed */
+            top: 0; /* Position from the top */
+            max-height:40vh;
+            overflow-y: scroll;
+        }
+
+        .student-form label {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #1e272e;
+        }
+
+        .student-form input[type="text"],
+        .student-form input[type="email"],
+        .student-form input[type="date"],
+        .student-form select {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: calc(100% - 20px); /* Full width minus padding */
+            box-sizing: border-box;
+        }
+
+        .student-form select {
+            width: 100%; /* Adjust width for select boxes */
+        }
+
+        .student-form .gender {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .student-form .gender label {
+            margin-right: 10px;
+        }
+
+        .student-form .btn-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%; /* Full width */
+        }
+
+        .student-form button {
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #F2613F;
+            color: #FFFFFF;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            padding: 10px;
+            width: 45%; /* Adjusted width for buttons */
+            text-align: center;
+        }
+
+        .student-form button:hover {
+            background-color: #0056b3;
+        }
+        .content h2 
+        {
+            font-size:15px;
+        }
+    }
+    @media screen and (min-width:500px) and (max-width:799px)
+         {
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            /* color: #e1d9d9; */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        #header {
+            background-color: whitesmoke;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 95%;
+            flex-shrink: 0;
+            color: #1e272e;
+        }
+        #logo {
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+        #logo img {
+            max-width: 250px;
+            max-height: 100px;
+        }
+        #date-time {
+            padding-right: 20px;
+        }
+        .main {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            position: relative;
+        }
+        .sidebar {
+            background-color: #e1d9d9;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 200px;
+            flex-shrink: 0;
+            border-radius: 10px;
+        }
+        .pages {
+            margin-bottom: 10px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: whitesmoke;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+            font-weight: 500;
+            color: black;
+            text-decoration: none;
+        }
+        .pages:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+        .pages.active {
+            background-color: whitesmoke;
+            color: black;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            overflow-x: hidden;
+            background-image: url("https://img.freepik.com/free-vector/businessman-planning-events-deadlines-agenda_74855-6274.jpg");
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: 350px;
+        }
+        .option-box {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100px;
+            padding: 10px;
+            background-color: #F2613F;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #FFFFFF;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-size: 12px;
+        }
+        .option-box i {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        .option-box:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+        .footer {
+            background-color: whitesmoke;
+            color: black;
+            text-align: center;
+            padding: 20px 10px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: 500;
+           
+        }
+        #header #date-time {
+            width: 25%;
+            height: 90px;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-weight: bolder;
+            font-size:15px;
+        }
+        /* Media queries for responsiveness */
+        @media screen and (max-width: 768px) {
+            .main {
+                flex-direction: column;
+            }
+            .sidebar {
+                flex-direction: row;
+                width: 90%;
+                height: auto;
+            }
+            .pages {
+                width: auto;
+                margin-right: 10px;
+                margin-bottom: 0;
+            }
+            /* .content {
+                align-items: center;
+                text-align: center;
+            } */
+            /* .option-box {
+                width: 80%;
+            } */
+            .student-form {
+                width: 80%; /* Adjust width for responsiveness */
+            }
+        }
+        /* CSS for Student Addition Form */
+        .student-form {
+            display: none;
+            flex-direction: column;
+            background-color: whitesmoke;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            width: 300px; /* Full width for desktop */
+          height:40vh;
+            max-height:40vh;
+            overflow-y: scroll;
+        }
+
+        .student-form label {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #1e272e;
+        }
+
+        .student-form input[type="text"],
+        .student-form input[type="email"],
+        .student-form input[type="date"],
+        .student-form select {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: calc(100% - 20px); /* Full width minus padding */
+            box-sizing: border-box;
+        }
+
+        .student-form select {
+            width: 100%; /* Adjust width for select boxes */
+        }
+
+        .student-form .gender {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .student-form .gender label {
+            margin-right: 10px;
+        }
+
+        .student-form .btn-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%; /* Full width */
+        }
+
+        .student-form button {
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #F2613F;
+            color: #FFFFFF;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            padding: 10px;
+            width: 35%; /* Adjusted width for buttons */
+            text-align: center;
+        }
+
+        .student-form button:hover {
+            background-color: #0056b3;
+        }
+        .content h2 
+        {
+            font-size:15px;
+        }
+    }
+    @media screen and (min-width: 300px) and (max-width: 500px) {
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    #header {
+        background-color: whitesmoke;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        flex-shrink: 0;
+        color: #1e272e;
+    }
+    #logo {
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+    }
+    #logo img {
+        max-width: 200px;
+        max-height: 100px;
+    }
+    #date-time {
+        padding-right: 20px;
+    }
+    .main {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        position: relative;
+    }
+    .sidebar {
+        background-color: #e1d9d9;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 200px;
+        flex-shrink: 0;
+        border-radius: 10px;
+    }
+    .pages {
+        margin-bottom: 10px;
+        padding: 10px;
+        cursor: pointer;
+        background-color: whitesmoke;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        border-radius: 5px;
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+        color: black;
+        text-decoration: none;
+    }
+    .pages:hover {
+        background-color: #0056b3;
+        transform: translateY(-3px);
+    }
+    .pages.active {
+        background-color: whitesmoke;
+        color: black;
+    }
+    .content {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative; /* Added for absolute positioning */
+        overflow-x: hidden; /* Hide overflow for sliding animation */
+        background-image: url("https://img.freepik.com/free-vector/businessman-planning-events-deadlines-agenda_74855-6274.jpg");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 220px;
+    }
+    .option-box {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100px;
+        padding: 10px;
+        background-color: #f2613f;
+        border-radius: 10px;
+        margin: 10px 0;
+        color: #ffffff;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        font-size: 12px;
+    }
+    .option-box i {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    .option-box:hover {
+        background-color: #0056b3;
+        transform: translateY(-3px);
+    }
+    .footer {
+        background-color: whitesmoke;
+        color: black;
+        text-align: center;
+        padding: 20px 10px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 500;
+    }
+    #header #date-time {
+        width: 25%;
+        height: 90px;
+        background-color: #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-weight: bolder;
+        font-size: 15px;
+    }
+
+    /* Media queries for responsiveness */
+    @media screen and (max-width: 768px) {
+        .main {
+            flex-direction: column;
+        }
+        .sidebar {
+            flex-direction: row;
+            width: 88%;
+            height: auto;
+        }
+        .pages {
+            width: auto;
+            margin-right: 10px;
+            margin-bottom: 0;
+        }
+        .student-form {
+            width: 80%; /* Adjust width for responsiveness */
+        }
+    }
+
+    /* CSS for Student Addition Form */
+    .student-form {
+        display: none;
+        flex-direction: column;
+        background-color: whitesmoke;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 30px;
+        width: 300px; /* Full width for desktop */
+        height:40vh;
+            max-height:40vh;
+            overflow-y: scroll;
+    }
+
+    .student-form label {
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #1e272e;
+    }
+
+    .student-form input[type="text"],
+    .student-form input[type="email"],
+    .student-form input[type="date"],
+    .student-form select {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: calc(100% - 20px); /* Full width minus padding */
+        box-sizing: border-box;
+    }
+
+    .student-form select {
+        width: 100%; /* Adjust width for select boxes */
+    }
+
+    .student-form .gender {
+        display: flex;
+        margin-bottom: 15px;
+    }
+
+    .student-form .gender label {
+        margin-right: 10px;
+    }
+
+    .student-form .btn-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%; /* Full width */
+    }
+
+    .student-form button {
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #f2613f;
+        color: #ffffff;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        padding: 10px;
+        width: 35%; /* Adjusted width for buttons */
+        text-align: center;
+    }
+
+    .student-form button:hover {
+        background-color: #0056b3;
+    }
+
+    .content h2 {
+        font-size: 15px;
+    }
+}

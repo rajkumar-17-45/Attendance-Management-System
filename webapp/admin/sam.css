@@ -1,0 +1,3807 @@
+@charset "ISO-8859-1";
+           
+@media screen and (min-width:1000px) and (max-width:2000px){
+    body {
+        font-family: 'Roboto', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        display: flex;
+        min-height: 100vh;
+    }
+    
+    #header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 95%;
+        max-width: 1200px;
+        height: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        position:fixed;
+        z-index:100;
+    }
+    
+    #logo {
+        width: 70%;
+        text-align: left;
+    }
+    
+    #logo img {
+        width: 60%;
+        height: 100px;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    #date-time {
+        flex: 1;
+        text-align: right;
+        padding: 10px;
+        background-color: #e0e0e0;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    #current-time, #current-date {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: 16px;
+        margin: 2px 0;
+        font-weight: 600;
+        color: #333;
+    }
+    
+    .main {
+        width: 95vw;
+        display: flex;
+        padding: 20px;
+        gap: 20px;
+        justify-content: center;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 120px; 
+    }
+    
+    .sidebar {
+        width: 22%;
+        background-color: rgb(242, 238, 238);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s, background-color 0.3s;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 50px; 
+        bottom: 0;
+        margin-top: 100px;
+    }
+    
+    .sidebar div{
+        font-family: 'Open Sans', Arial, sans-serif;
+        padding:4%;
+        font-size: 18px;
+        color: #333;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s, transform 0.3s;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+
+    }
+    
+    .sidebar div:hover {
+        background-color:#0056b3;
+        color: #ffffff;
+    }
+    
+    .sidebar div:not(:last-child) {
+        border-bottom: 1px solid #ccc;
+    }
+    .add-faculty{
+        width:400px;
+    }
+    
+    .details {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        top: 220px;
+        
+        position:absolute;
+        left:25%;
+        display:none;
+    }
+    #course-dis
+    {
+      position:relative;
+      
+    }
+    
+    .icons {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .details{
+        display: block
+    }
+  
+    .sidebar .pages {
+        display: block;
+        margin: 10px 0;
+        text-decoration: none;
+    }
+
+    #faculty-content table td button{
+        background-color:rgb(242,93,1);
+        width:90%;
+        height:30px;
+        border:0px solid black;
+        border-radius:10px;
+        margin-top:4px;
+    }
+    #faculty-content table td button:hover{
+        background-color: #0056b3;
+    }
+    #student-content table td button{
+        background-color:rgb(242,93,1);
+        width:90%;
+        height:30px;
+        border:0px solid black;
+        border-radius:10px;
+        margin-top:4px;
+    }
+    #student-content table td button:hover{
+        background-color: #0056b3;
+    }
+    #course-content table td button{
+        background-color:rgb(242,93,1);
+        width:90%;
+        height:30px;
+        border:0px solid black;
+        border-radius:10px;
+        margin-top:4px;
+    }
+    #course-content table td button:hover{
+        background-color: #0056b3;
+    }
+    #subject-content table td button{
+        background-color:rgb(242,93,1);
+        width:90%;
+        height:30px;
+        border:0px solid black;
+        border-radius:10px;
+        margin-top:4px;
+    }
+    #subject-content table td button:hover{
+        background-color: #0056b3;
+    }
+    #assign-faculty-content table td button{
+        background-color:rgb(242,93,1);
+        width:90%;
+        height:30px;
+        border:0px solid black;
+        border-radius:10px;
+        margin-top:4px;
+    }
+    #assign-faculty-content table td button:hover{
+        background-color: #0056b3;
+    }
+    #add-course form button{
+     background-color:rgb(242,93,1);
+    }
+    #add-course form button:hover{
+     background-color:#0056b3;
+    }
+    #add-faculty form button{
+     background-color:rgb(242,93,1);
+    }
+    #add-faculty form button:hover{
+     background-color:#0056b3;
+    }
+    #add-student form button{
+     background-color:rgb(242,93,1);
+    }
+    #add-student form button:hover{
+     background-color:#0056b3;
+    }
+    #add-assign-faculty form button{
+     background-color:rgb(242,93,1);
+    }
+    #add-assign-faculty form button:hover{
+     background-color:#0056b3;
+    }
+    #add-subject form button{
+     background-color:rgb(242,93,1);
+    }
+    #add-subject form button:hover{
+     background-color:#0056b3;
+    }
+    .student{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        width: 10%;
+        margin-left:20px;
+    }
+    .faculty
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width:80px;
+       margin-left:20px;
+    }
+    .course{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        width:80px;
+       margin-left:20px;
+    }
+    .subject
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        width:80px;
+       margin-left:20px; 
+    }
+    .assign-faculty
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        width:80px;
+       margin-left:20px; 
+    }
+    .scroll-stop {
+            overflow: auto;
+        }
+      #faculty-content #faculty-form table td .sno-input
+      {
+        width:100%;
+        border:0px solid black;
+        background-color:#f2f2f2;
+      }
+      #student-content #student-form table td .sno-input
+      {
+        width:100%;
+        border:0px solid black;
+        background-color:#f2f2f2;
+      }
+      #course-form table td .sno-input
+      {
+       width:100%;
+        border:0px solid black;
+        background-color:#f2f2f2;
+      }
+            #subject-form table td .sno-input
+      {
+       width:100%;
+        border:0px solid black;
+        background-color:#f2f2f2;
+      }
+      #assign-faculty-form table td .sno-input
+      {
+       width:100%;
+        border:0px solid black;
+        background-color:#f2f2f2;
+      }
+        .multiline-display {
+            white-space: pre-wrap; /* Preserve white spaces and line breaks */
+            /* border: 1px solid #ccc; */
+            padding: 5px;
+            min-height: 30px;
+            width:100%; /* Set a fixed width */
+            height:100%;
+            box-sizing: border-box;
+            word-wrap: break-word; /* Ensure long words wrap within the container */
+        }
+        .multiline-input {
+            width:100%;
+            box-sizing: border-box;
+            display: none;
+        }
+       #faculty-content  table {
+            width: 100%; /* Ensure table takes full width of container */
+        }
+        #faculty-content th, td {
+            padding: 5px;
+            text-align: center;
+        }
+       #faculty-content th {
+            background-color: #f2f2f2;
+        }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    
+    table, th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+  
+    
+    .options {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .options button {
+        padding: 10px 20px;
+        font-size: 16px;
+         background-color:rgb(242,93,1);
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        width:150px;
+        height:50px;
+        border-radius:8px;
+    }
+    
+    .options button:hover {
+        background-color: #0056b3;
+    }
+    
+    #add-faculty  form {
+        width: 100%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #add-faculty   form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-faculty form input[type="text"],
+    #add-faculty  form input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty  form input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty  form input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty  form input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty  form select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty   form select  option
+    {
+        font-size:15px;
+    }
+    #add-faculty form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+   #add-faculty  form button:hover {
+        background-color: #0056b3;
+    }
+    #add-student  form {
+        width: 100%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #add-student    form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-student  form input[type="text"],
+    #add-student   form input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-student   form input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-student   form input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-student   form input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-student  form select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-student    form select  option
+    {
+        font-size:15px;
+    }
+    #add-student  form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #add-student  form button:hover {
+        background-color: #0056b3;
+    }
+    #add-course  form {
+        width: 100%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #add-course    form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-course  form input[type="text"],
+    #add-course   form input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-course   form input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-course   form input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-course  form input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-course  form select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-course    form select  option
+    {
+        font-size:15px;
+    }
+    #add-course  form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #add-course  form button:hover {
+        background-color: #0056b3;
+    }
+    #add-subject  form {
+        width: 100%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #add-subject   form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-subject  form input[type="text"],
+    #add-subject  form input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject form input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject   form input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject  form input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject  form select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject    form select  option
+    {
+        font-size:15px;
+    }
+    #add-subject  form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #add-subject form button:hover {
+        background-color: #0056b3;
+    }
+    #add-assign-faculty  form {
+        width: 100%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #add-assign-faculty    form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-assign-faculty   form input[type="text"],
+    #add-assign-faculty   form input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-assign-faculty  form input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-assign-faculty    form input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-assign-faculty   form input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-assign-faculty  form select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-assign-faculty     form select  option
+    {
+        font-size:15px;
+    }
+    #add-assign-faculty  form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #add-assign-faculty  form button:hover {
+        background-color: #0056b3;
+    }
+    #fac
+    {
+        color:black;
+    }
+    #header
+    {
+        
+    }
+  
+    .faculty-list-but button
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+    }
+    .student-list-but button
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+    }
+    .add-faculty-but button
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+    }
+    .student-faculty-but button
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+    }
+    .course-list-but
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1); 
+        border-radius:8px;
+    }
+    .add-course-but{
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);  
+        border-radius:8px;
+    }
+    .subject-list-but
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1); 
+        border-radius:8px;
+    }
+    .add-subject-but{
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);  
+        border-radius:8px;
+    }
+    #plus
+    {
+        font-size:23px;
+    }
+    .assign-faculty-list-but
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);  
+        border-radius:8px;
+    }
+    .add-assign-faculty-but button
+    {
+        width:170px;
+        height:50px;
+        background-color:rgb(242,93,1); 
+    }
+    
+    
+    table {
+    width:75vw;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed; 
+    }
+    
+    th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    word-wrap: break-word; 
+    max-width: 200px; 
+    font-size:11.5px;
+    }
+   table #table-dis
+    {
+        width:100%;
+        border:0px solid black;
+        height:70px;
+        background-color: #f2f2f2;
+        text-wrap:wrap;
+    }
+    
+    
+    th {
+    background-color: #f0f0f0;
+    }
+    
+    tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+    }
+    
+
+    @media (max-width: 768px) {
+    table {
+    font-size: 14px; 
+    }
+    
+    th, td {
+    max-width: none; 
+    }
+    }
+    
+    
+   
+    
+    
+     input[type="checkbox"]     {
+    width:20px;
+    height:20px;
+    }
+   
+    
+      #assign-faculty-form table 
+      {
+        width:100%;
+      }
+      
+    
+    
+    
+  }
+  @media screen and (min-width:803px) and (max-width:1000px) {
+    
+    body {
+        font-family: 'Roboto', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        display: flex;
+        min-height: 100vh;
+    }
+    
+    #header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 95%;
+        max-width: 1200px;
+        height: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        position:fixed;
+        z-index:100;
+    }
+    
+    #logo {
+        width: 70%;
+        text-align: left;
+    }
+    
+    #logo img {
+        width: 60%;
+        height: 100px;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    #date-time {
+        flex: 1;
+        text-align: right;
+        padding: 10px;
+        background-color: #e0e0e0;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    #current-time, #current-date {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: 16px;
+        margin: 2px 0;
+        font-weight: 600;
+        color: #333;
+    }
+    
+    .main {
+        width: 95vw;
+        display: flex;
+        padding: 20px;
+        gap: 20px;
+        justify-content: center;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 120px;
+    }
+    .scroll-stop {
+            overflow: auto;
+        }
+      #faculty-content #faculty-form table td .sno-input
+      {
+        width:100%;
+        border:0px solid black;
+        background-color:#f2f2f2;
+
+      }
+      #student-content #student-form table td .sno-input
+      {
+        width:100%;
+        border:0px solid black;
+        background-color:#f2f2f2;
+      }
+      #student-content #student-form  button 
+      {
+        width:100%;
+        height:30px;
+        font-weight: bolder;
+      }
+     
+        .multiline-display {
+            white-space: pre-wrap; /* Preserve white spaces and line breaks */
+            /* border: 1px solid #ccc; */
+            padding: 5px;
+            min-height: 30px;
+            width:100%; /* Set a fixed width */
+            height:100%;
+            box-sizing: border-box;
+            word-wrap: break-word; /* Ensure long words wrap within the container */
+        }
+        .multiline-input {
+            width:100%;
+            box-sizing: border-box;
+            display: none;
+        }
+       #faculty-content  table {
+            width: 100%; /* Ensure table takes full width of container */
+        }
+        #faculty-content th, td {
+            padding: 5px;
+            text-align: center;
+        }
+        #faculty-content th {
+            background-color: #f2f2f2;
+        }
+        #faculty-content #faculty-form table button{
+            width:100%;
+            height:30px;
+            font-weight: bolder;
+        }
+    
+    .sidebar {
+        width: 22%;
+        background-color: rgb(242, 238, 238);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s, background-color 0.3s;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 50px; 
+        bottom: 0;
+        margin-top: 100px;
+        z-index:  100;
+    }
+    
+    .sidebar div{
+        font-family: 'Open Sans', Arial, sans-serif;
+        padding:4%;
+        font-size: 18px;
+        color: #333;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s, transform 0.3s;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .sidebar div:hover {
+        background-color: #007bff;
+        color: #ffffff;
+    }
+    
+    .sidebar div:not(:last-child) {
+        border-bottom: 1px solid #ccc;
+    }
+    .add-faculty{
+        width:400px;
+    }
+    
+    .details {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        top: 20px;
+        position:absolute;
+        left:25%;
+        top:200px;
+        display:none;
+    }
+    #course-dis
+    {
+      position:relative;
+    }
+    
+    .icons {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .details{
+        display: block
+    }
+  
+    .sidebar .pages {
+        display: block;
+        margin: 10px 0;
+        text-decoration: none;
+    }
+
+    
+    .student{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        width: 10%;
+        margin-left:20px;
+    }
+    .faculty
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* transition: transform 0.3s, box-shadow 0.3s; */
+        width:80px;
+       margin-left:20px;
+    }
+    .course{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        width:80px;
+       margin-left:20px;
+    }
+    .subject
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        width:80px;
+       margin-left:20px; 
+    }
+    .assign-faculty
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        width:80px;
+       margin-left:20px; 
+    }
+    #faculty-content table td button{
+        background-color:rgb(242,93,1);
+        width:90%;
+        height:30px;
+        border:0px solid black;
+        border-radius:10px;
+        margin-top:4px;
+        font-size:9px;
+    }
+    #faculty-content table td button:hover{
+        background-color: #0056b3;
+    }
+    #student-content table td button{
+        background-color:rgb(242,93,1);
+        width:90%;
+        height:30px;
+        border:0px solid black;
+        border-radius:10px;
+        margin-top:4px;
+        font-size:9px;
+    }
+    #student-content table td button:hover{
+        background-color: #0056b3;
+    }
+    #course-content table td button{
+        background-color:rgb(242,93,1);
+        width:90%;
+        height:30px;
+        border:0px solid black;
+        border-radius:10px;
+        margin-top:4px;
+        font-size:9px;
+    }
+    #course-content table td button:hover{
+        background-color: #0056b3;
+    }
+    #subject-content table td button{
+        background-color:rgb(242,93,1);
+        width:90%;
+        height:30px;
+        border:0px solid black;
+        border-radius:10px;
+        margin-top:4px;
+        font-size:9px;
+    }
+    #subject-content table td button:hover{
+        background-color: #0056b3;
+    }
+    #assign-faculty-content table td button{
+        background-color:rgb(242,93,1);
+        width:90%;
+        height:30px;
+        border:0px solid black;
+        border-radius:10px;
+        margin-top:4px;
+        font-size:9px;
+    }
+    #assign-faculty-content table td button:hover{
+        background-color: #0056b3;
+    }
+    #add-course form button{
+     background-color:rgb(242,93,1);
+    }
+    #add-course form button:hover{
+     background-color:#0056b3;
+    }
+    #add-faculty form button{
+     background-color:rgb(242,93,1);
+    }
+    #add-faculty form button:hover{
+     background-color:#0056b3;
+    }
+    #add-student form button{
+     background-color:rgb(242,93,1);
+    }
+    #add-student form button:hover{
+     background-color:#0056b3;
+    }
+    #add-assign-faculty form button{
+     background-color:rgb(242,93,1);
+    }
+    #add-assign-faculty form button:hover{
+     background-color:#0056b3;
+    }
+    #add-subject form button{
+     background-color:rgb(242,93,1);
+    }
+    #add-subject form button:hover{
+     background-color:#0056b3;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    
+    table, th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+   
+    
+    .options {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .options button {
+        padding: 10px 20px;
+        font-size: 16px;
+         background-color:rgb(242,93,1);
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        width:150px;
+        height:50px;
+        border-radius:8px;
+    }
+    
+    .options button:hover {
+        background-color: #0056b3;
+    }
+    
+    #add-faculty   form {
+        width: 100%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #add-faculty  form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-faculty  form input[type="text"],
+    #add-faculty   form input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty  form input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty  form input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty  form input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty  form select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty  form select  option
+    {
+        font-size:15px;
+    }
+    #add-faculty  form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #add-faculty  form button:hover {
+        background-color: #0056b3;
+    }
+
+    #add-subject   form {
+        width: 100%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #add-subject  form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-subject form input[type="text"],
+    #add-subject   form input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject form input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject  form input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject  form input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject  form select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject  form select  option
+    {
+        font-size:15px;
+    }
+    #add-subject  form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #add-subject  form button:hover {
+        background-color: #0056b3;
+    }
+    #add-faculty   form {
+        width: 100%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #add-faculty  form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-faculty  form input[type="text"],
+    #add-faculty   form input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty  form input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    #add-faculty  form input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty  form input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty  form select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty  form select  option
+    {
+        font-size:15px;
+    }
+    #add-faculty  form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #add-faculty  form button:hover {
+        background-color: #0056b3;
+    }
+
+    #add-subject   form {
+        width: 100%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #add-subject  form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-subject form input[type="text"],
+    #add-subject   form input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject form input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject  form input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject  form input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject  form select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject  form select  option
+    {
+        font-size:15px;
+    }
+    #add-subject  form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #add-subject  form button:hover {
+        background-color: #0056b3;
+    }
+    #add-course   form {
+        width: 100%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #add-course  form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-course  form input[type="text"],
+    #add-course   form input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-course form input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-course  form input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-course  form input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-course  form select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-course  form select  option
+    {
+        font-size:15px;
+    }
+    #add-course  form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #add-student   form button:hover {
+        background-color: #0056b3;
+    }
+
+     #add-student   form {
+        width: 100%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #add-student  form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-student  form input[type="text"],
+    #add-student   form input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-student form input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-student  form input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-student  form input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-student  form select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-student  form select  option
+    {
+        font-size:15px;
+    }
+    #add-student  form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #add-student  form button:hover {
+        background-color: #0056b3;
+    }
+
+   
+
+     #add-assign-faculty   form {
+        width: 100%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #add-assign-faculty  form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-assign-faculty  form input[type="text"],
+    #add-assign-faculty   form input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-assign-faculty form input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-assign-faculty  form input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-assign-faculty  form input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-assign-faculty  form select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-assign-faculty  form select  option
+    {
+        font-size:15px;
+    }
+    #add-assign-faculty  form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #add-assign-faculty  form button:hover {
+        background-color: #0056b3;
+    }
+    #fac
+    {
+        color:black;
+    }
+    #header
+    {
+        
+    }
+  
+    .faculty-list-but button
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+    }
+    .student-list-but button
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+    }
+    .add-faculty-but button
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+    }
+    .student-faculty-but button
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+    }
+    .course-list-but
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1); 
+        border-radius:8px;
+    }
+    .add-course-but{
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);  
+        border-radius:8px;
+    }
+    .subject-list-but
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1); 
+        border-radius:8px;
+    }
+    .add-subject-but{
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);  
+        border-radius:8px;
+    }
+    #plus
+    {
+        font-size:23px;
+    }
+    .assign-faculty-list-but
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);  
+        border-radius:8px;
+    }
+    .add-assign-faculty-but button
+    {
+        width:170px;
+        height:50px;
+        background-color:rgb(242,93,1); 
+    }
+    
+    
+
+    table {
+    width:75vw;
+    border-collapse: collapse;
+    margin-top: 20px;
+    /* table-layout: fixed;  */
+    overflow-x:scroll;
+    }
+    
+    th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    word-wrap: break-word; 
+    max-width: 200px;
+    font-size:13px;
+    }
+    
+    th {
+    background-color: #f0f0f0;
+    }
+    
+    tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+    }
+    
+  
+    
+   
+    @media (max-width: 768px) {
+    table {
+    font-size: 14px; 
+    }
+    
+    th, td {
+    max-width: none; 
+    }
+    }
+    
+    
+   
+    
+    
+     input[type="checkbox"]     {
+    width:20px;
+    height:20px;
+    }
+   
+    
+    .options{
+    
+    }
+    
+    
+    
+  }
+  
+  @media screen and (min-width:501px) and (max-width:800px) {
+    
+    body {
+        font-family: 'Roboto', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        display: flex;
+        min-height: 100vh;
+    }
+    
+    #header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 95%;
+        max-width: 1200px;
+        height: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        position:fixed;
+        z-index:100;
+    }
+    
+    #logo {
+        width: 70%;
+        text-align: left;
+    }
+    
+    #logo img {
+        width: 60%;
+        height: 100px;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    #date-time {
+        flex: 1;
+        text-align: right;
+        padding: 10px;
+        background-color: #e0e0e0;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    #current-time, #current-date {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: 16px;
+        margin: 2px 0;
+        font-weight: 600;
+        color: #333;
+    }
+    
+    .main {
+        width: 95vw;
+        display: flex;
+        padding: 20px;
+        gap: 20px;
+        justify-content: center;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 120px; 
+    }
+    
+    .sidebar {
+        width:95%;
+        background-color: rgb(242, 238, 238);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s, background-color 0.3s;
+        display: flex;
+        flex-direction: row;
+        height: 14%;
+        position: fixed;
+        left: 0;
+        top: 50px; 
+        bottom: 0;
+        margin-top: 100px;
+    }
+    
+    .sidebar div{
+        font-family: 'Open Sans', Arial, sans-serif;
+        padding:2%;
+        font-size: 15px;
+        color: #333;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s, transform 0.3s;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .scroll-stop {
+            overflow: auto;
+        }
+      #faculty-content #faculty-form table td .sno-input
+      {
+        width:100%;
+        border:0px solid black;
+        background-color:#f2f2f2;
+
+      }
+      #student-content #student-form table td .sno-input
+      {
+        width:100%;
+        border:0px solid black;
+        background-color:#f2f2f2;
+      }
+        .multiline-display {
+            white-space: pre-wrap; /* Preserve white spaces and line breaks */
+            /* border: 1px solid #ccc; */
+            padding: 5px;
+            min-height: 30px;
+            width:100%; /* Set a fixed width */
+            height:100%;
+            box-sizing: border-box;
+            word-wrap: break-word; /* Ensure long words wrap within the container */
+        }
+        .multiline-input {
+            width:100%;
+            box-sizing: border-box;
+            display: none;
+        }
+       #faculty-content  table {
+            width: 100%; /* Ensure table takes full width of container */
+        }
+        #faculty-content th, td {
+            padding: 5px;
+            text-align: center;
+        }
+       #faculty-content th {
+            background-color: #f2f2f2;
+        }
+    
+    .sidebar div:hover {
+        background-color: #007bff;
+        color: #ffffff;
+    }
+    
+    .sidebar div:not(:last-child) {
+        border-bottom: 1px solid #ccc;
+    }
+    .add-faculty{
+        width:400px;
+    }
+    
+    .details {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        margin-top:80px;
+        position:absolute;
+        left:0%;
+        top:200px;
+        display:none;
+    }
+    #course-dis
+    {
+      position:relative;
+    }
+    
+    .icons {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .details{
+        display: block
+    }
+   
+    .sidebar .pages {
+        display: block;
+        margin: 10px 0;
+        text-decoration: none;
+    }
+
+    
+    .student{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        width: 10%;
+        margin-left:20px;
+    }
+    .faculty
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* transition: transform 0.3s, box-shadow 0.3s; */
+        width:80px;
+       margin-left:20px;
+    }
+    .course{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        width:80px;
+       margin-left:20px;
+    }
+    .subject
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        width:80px;
+       margin-left:20px; 
+    }
+    .assign-faculty
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        width:80px;
+       margin-left:20px; 
+    }
+    #faculty-content table td button{
+        background-color:rgb(242,93,1);
+        width:90%;
+        height:30px;
+        border:0px solid black;
+        border-radius:10px;
+        margin-top:4px;
+        font-size:9px;
+    }
+    #faculty-content table td button:hover{
+        background-color: #0056b3;
+    }
+    #student-content table td button{
+        background-color:rgb(242,93,1);
+        width:90%;
+        height:30px;
+        border:0px solid black;
+        border-radius:10px;
+        margin-top:4px;
+        font-size:9px;
+    }
+    #student-content table td button:hover{
+        background-color: #0056b3;
+    }
+    #course-content table td button{
+        background-color:rgb(242,93,1);
+        width:90%;
+        height:30px;
+        border:0px solid black;
+        border-radius:10px;
+        margin-top:4px;
+        font-size:9px;
+    }
+    #course-content table td button:hover{
+        background-color: #0056b3;
+    }
+    #subject-content table td button{
+        background-color:rgb(242,93,1);
+        width:90%;
+        height:30px;
+        border:0px solid black;
+        border-radius:10px;
+        margin-top:4px;
+        font-size:9px;
+    }
+    #subject-content table td button:hover{
+        background-color: #0056b3;
+    }
+    #assign-faculty-content table td button{
+        background-color:rgb(242,93,1);
+        width:90%;
+        height:30px;
+        border:0px solid black;
+        border-radius:10px;
+        margin-top:4px;
+        font-size:9px;
+    }
+    #assign-faculty-content table td button:hover{
+        background-color: #0056b3;
+    }
+    
+
+    #add-course form button{
+     background-color:rgb(242,93,1);
+    }
+    #add-course form button:hover{
+     background-color:#0056b3;
+    }
+    #add-faculty form button{
+     background-color:rgb(242,93,1);
+    }
+    #add-faculty form button:hover{
+     background-color:#0056b3;
+    }
+    #add-student form button{
+     background-color:rgb(242,93,1);
+    }
+    #add-student form button:hover{
+     background-color:#0056b3;
+    }
+    #add-assign-faculty form button{
+     background-color:rgb(242,93,1);
+    }
+    #add-assign-faculty form button:hover{
+     background-color:#0056b3;
+    }
+    #add-subject form button{
+     background-color:rgb(242,93,1);
+    }
+    #add-subject form button:hover{
+     background-color:#0056b3;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    
+    table, th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+  
+    
+    .options {
+        display: flex;
+        gap: 20px;
+        
+    }
+    
+    .options button {
+        padding: 10px 20px;
+        font-size: 16px;
+         background-color:rgb(242,93,1);
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        width:150px;
+        height:50px;
+        border-radius:8px;
+    }
+    
+    .options button:hover {
+        background-color: #0056b3;
+    }
+    
+   #add-faculty form {
+        width: 100%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #add-faculty  form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-faculty  form input[type="text"],
+    #add-faculty form input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty  form input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty  form input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty  form input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty   form select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty  form select  option
+    {
+        font-size:15px;
+    }
+    #add-faculty   form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #add-faculty  form button:hover {
+        background-color: #0056b3;
+    }
+    #add-student form {
+        width: 100%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #add-student  form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-student  form input[type="text"],
+    #add-student form input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-student form input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-student  form input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-student  form input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #faculty-content #faculty-form table td button{
+      width:100%;
+      height:20px;
+    
+    }
+    #add-student   form select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-student form select  option
+    {
+        font-size:15px;
+    }
+    #add-student   form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #add-student  form button:hover {
+        background-color: #0056b3;
+    }
+
+
+    #add-course form {
+        width: 100%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #add-course  form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-course  form input[type="text"],
+    #add-course form input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-course form input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-course  form input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-course form input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-course   form select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-course form select  option
+    {
+        font-size:15px;
+    }
+    #add-course   form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #add-course form button:hover {
+        background-color: #0056b3;
+    }
+
+    
+    #add-subject form {
+        width: 100%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #add-subject  form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-subject  form input[type="text"],
+    #add-subject form input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject form input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject form input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject form input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject   form select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject form select  option
+    {
+        font-size:15px;
+    }
+    #add-subject   form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #add-subject form button:hover {
+        background-color: #0056b3;
+    }
+
+
+    #add-assign-faculty form {
+        width: 100%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #add-assign-faculty  form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-assign-faculty  form input[type="text"],
+    #add-assign-faculty form input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-assign-faculty form input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-assign-faculty form input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-assign-faculty form input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-assign-faculty   form select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-assign-faculty form select  option
+    {
+        font-size:15px;
+    }
+    #add-assign-faculty   form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #add-assign-faculty form button:hover {
+        background-color: #0056b3;
+    }
+    #fac
+    {
+        color:black;
+    }
+    #header
+    {
+        
+    }
+  
+    .faculty-list-but button
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+    }
+    .student-list-but button
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+    }
+    .add-faculty-but button
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+    }
+    .student-faculty-but button
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+    }
+    .course-list-but
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1); 
+        border-radius:8px;
+    }
+    .add-course-but{
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);  
+        border-radius:8px;
+    }
+    .subject-list-but
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1); 
+        border-radius:8px;
+    }
+    .add-subject-but{
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);  
+        border-radius:8px;
+    }
+    #plus
+    {
+        font-size:23px;
+    }
+    .assign-faculty-list-but
+    {
+        width:150px;
+        height:50px;
+        background-color:rgb(242,93,1);  
+        border-radius:8px;
+    }
+    .add-assign-faculty-but button
+    {
+        width:170px;
+        height:50px;
+        background-color:rgb(242,93,1); 
+    }
+    
+    
+ 
+    
+    table {
+    width:100vw;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: scroll;
+    }
+    
+    th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    word-wrap: break-word; 
+    max-width: 200px; 
+    font-size:15.5px;
+    }
+    .scroll-stop
+    {
+        max-width:95vw;
+        height:auto;
+        overflow:scroll
+    }
+    
+    th {
+    background-color: #f0f0f0;
+    }
+    
+    tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+    }
+    
+   
+    @media (max-width: 768px) {
+    table {
+    font-size: 14px; 
+    }
+    
+    th, td {
+    max-width: none; 
+    }
+    }
+    
+    
+   
+    
+    
+     input[type="checkbox"]     {
+    width:20px;
+    height:20px;
+    }
+ 
+   
+    .options{
+    
+    }
+    
+    
+    
+  }
+  @media screen and (min-width:300px) and (max-width:500px) {
+    
+
+
+
+    body {
+        font-family: 'Roboto', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        display: flex;
+        min-height: 100vh;
+    }
+    
+    #header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 95%;
+        max-width: 1200px;
+        height: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        /* top: 10px; */
+        left: 50%;
+        transform: translateX(-50%);
+        position:fixed;
+        z-index:100;
+    }
+    
+    #logo {
+        width: 70%;
+        text-align: left;
+    }
+    
+    #logo img {
+        width: 60%;
+        height: 100px;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    #date-time {
+        flex: 1;
+        text-align: right;
+        padding: 10px;
+        background-color: #e0e0e0;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    #current-time, #current-date {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: 16px;
+        margin: 2px 0;
+        font-weight: 600;
+        color: #333;
+    }
+    
+    .main {
+        width: 95vw;
+        display: flex;
+        padding: 20px;
+        gap: 20px;
+        justify-content: center;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 120px; /* Adjusted for header positioning */
+    }
+    
+    .sidebar {
+        width:95%;
+        background-color: rgb(242, 238, 238);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s, background-color 0.3s;
+        display: flex;
+        flex-direction: row;
+        height: 7%;
+        position: fixed;
+        left: 0;
+        top: 50px; 
+        bottom: 0;
+        margin-top: 100px;
+    }
+    
+    .sidebar div{
+        font-family: 'Open Sans', Arial, sans-serif;
+        padding:2%;
+        font-size: 15px;
+        color: #333;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s, transform 0.3s;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .sidebar div:hover {
+        background-color:  #0056b3;
+        color: #ffffff;
+    }
+    
+    .sidebar div:not(:last-child) {
+        border-bottom: 1px solid #ccc;
+    }
+    .add-faculty{
+        width:400px;
+    }
+    
+    .details {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        margin-top:80px;
+        
+        position:absolute;
+        left:0%;
+        top:200px;
+        display:none;
+    }
+    #course-dis
+    {
+      position:relative;
+    }
+    
+    .icons {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .details{
+        display: block
+    }
+   
+    .sidebar .pages {
+        display: block;
+        margin: 10px 0;
+        text-decoration: none;
+    }
+   
+    .scroll-stop {
+            overflow: auto;
+        }
+      #faculty-content #faculty-form table td .sno-input
+      {
+        width:100%;
+        border:0px solid black;
+        background-color:#f2f2f2;
+
+      }
+      #student-content #student-form table td .sno-input
+      {
+        width:100%;
+        border:0px solid black;
+        background-color:#f2f2f2;
+      }
+     
+        .multiline-display {
+            white-space: pre-wrap; /* Preserve white spaces and line breaks */
+            /* border: 1px solid #ccc; */
+            padding: 5px;
+            min-height: 30px;
+            width:100%; /* Set a fixed width */
+            height:100%;
+            box-sizing: border-box;
+            word-wrap: break-word; /* Ensure long words wrap within the container */
+        }
+        .multiline-input {
+            width:100%;
+            box-sizing: border-box;
+            display: none;
+        }
+       #faculty-content  table {
+            width: 100%; /* Ensure table takes full width of container */
+        }
+        #faculty-content th, td {
+            padding: 5px;
+            text-align: center;
+        }
+       #faculty-content th {
+            background-color: #f2f2f2;
+        }
+        #faculty-content form table td  button{
+   width:100%;
+        }
+    .student{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        width:40px;
+        margin-left:20px;
+    }
+    .faculty
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* transition: transform 0.3s, box-shadow 0.3s; */
+        width:40px;
+       margin-left:20px;
+    }
+    .course{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        width:40px;
+       margin-left:20px;
+    }
+    .subject
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        width:40px;
+       margin-left:20px; 
+    }
+    .assign-faculty
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        width:40px;
+       margin-left:20px; 
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    
+    table, th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+ 
+    
+    .options {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .options button {
+        padding: 10px 20px;
+        font-size: 16px;
+         background-color:rgb(242,93,1);
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        width:150px;
+        height:50px;
+        border-radius:8px;
+    }
+    
+    .options button:hover {
+        background-color: #0056b3;
+    }
+    
+    #add-faculty form {
+        width:90%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+     
+    #add-faculty label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-faculty input[type="text"],
+    #add-faculty input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-faculty select  option
+    {
+        font-size:15px;
+    }
+    #add-faculty button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+     #add-faculty button:hover {
+        background-color: #0056b3;
+    }
+    #add-student form {
+        width:90%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+     
+    #add-student label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-student input[type="text"],
+    #add-student input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-student input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-student input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-student input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-student select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-student select  option
+    {
+        font-size:15px;
+    }
+   #add-student button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #add-student button:hover {
+        background-color: #0056b3;
+    }
+    #add-course form {
+        width:90%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+     
+    #add-course label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-course input[type="text"],
+    #add-course input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-course input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-course input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-course input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-course select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-course select  option
+    {
+        font-size:15px;
+    }
+    #add-course button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #add-course button:hover {
+        background-color: #0056b3;
+    }
+    #add-subject form {
+        width:90%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+     
+    #add-subject label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-subject input[type="text"],
+    #add-subject input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-subject select  option
+    {
+        font-size:15px;
+    }
+    #add-subject button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #add-subject button:hover {
+        background-color: #0056b3;
+    }
+
+    #add-assign-faculty form {
+        width:90%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+     
+    #add-assign-faculty label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    #add-assign-faculty input[type="text"],
+    #add-assign-faculty input[type="email"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-assign-faculty input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-assign-faculty input[type="date"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-assign-faculty input[type="number"]
+    {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-assign-faculty select{
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    #add-assign-faculty select  option
+    {
+        font-size:15px;
+    }
+    #add-assign-faculty button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #add-assign-faculty button:hover {
+        background-color: #0056b3;
+    }
+    #fac
+    {
+        color:black;
+    }
+    #header
+    {
+        
+    }
+    #faculty-content table td button{
+        background-color:rgb(242,93,1);
+        width:90%;
+        height:30px;
+        border:0px solid black;
+        border-radius:10px;
+        margin-top:4px;
+        font-size:9px;
+    }
+    #faculty-content table td button:hover{
+        background-color: #0056b3;
+    }
+    #student-content table td button{
+        background-color:rgb(242,93,1);
+        width:90%;
+        height:30px;
+        border:0px solid black;
+        border-radius:10px;
+        margin-top:4px;
+        font-size:9px;
+    }
+    #student-content table td button:hover{
+        background-color: #0056b3;
+    }
+    #course-content table td button{
+        background-color:rgb(242,93,1);
+        width:90%;
+        height:30px;
+        border:0px solid black;
+        border-radius:10px;
+        margin-top:4px;
+        font-size:9px;
+    }
+    #course-content table td button:hover{
+        background-color: #0056b3;
+    }
+    #subject-content table td button{
+        background-color:rgb(242,93,1);
+        width:90%;
+        height:30px;
+        border:0px solid black;
+        border-radius:10px;
+        margin-top:4px;
+        font-size:9px;
+    }
+    #subject-content table td button:hover{
+        background-color: #0056b3;
+    }
+    #assign-faculty-content table td button{
+        background-color:rgb(242,93,1);
+        width:90%;
+        height:30px;
+        border:0px solid black;
+        border-radius:10px;
+        margin-top:4px;
+        font-size:9px;
+    }
+    #assign-faculty-content table td button:hover{
+        background-color: #0056b3;
+    }
+    #add-course form button{
+     background-color:rgb(242,93,1);
+    }
+    #add-course form button:hover{
+     background-color:#0056b3;
+    }
+    #add-faculty form button{
+     background-color:rgb(242,93,1);
+    }
+    #add-faculty form button:hover{
+     background-color:#0056b3;
+    }
+    #add-student form button{
+     background-color:rgb(242,93,1);
+    }
+    #add-student form button:hover{
+     background-color:#0056b3;
+    }
+    #add-assign-faculty form button{
+     background-color:rgb(242,93,1);
+    }
+    #add-assign-faculty form button:hover{
+     background-color:#0056b3;
+    }
+    #add-subject form button{
+     background-color:rgb(242,93,1);
+    }
+    #add-subject form button:hover{
+     background-color:#0056b3;
+    }
+  
+    .faculty-list-but button
+    {
+        width:100px;
+        height:50px;
+        font-size:8px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+    }
+    .student-list-but button
+    {
+        width:100px;
+        height:50px;
+        font-size:8px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+    }
+    .add-faculty-but button
+    {
+        width:110px;
+        height:50px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+        font-size:8px;
+    }
+    .add-student-but button
+    {
+        width:100px;
+        height:50px;
+        font-size:8px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+    }
+    .course-list-but button
+    {
+        width:100px;
+        height:50px;
+        font-size:8px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+    }
+    .add-course-but button{
+     width:100px;
+        height:50px;
+        font-size:8px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+    }
+    .subject-list-but button
+    {
+        width:100px;
+        height:50px;
+        font-size:8px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+    }
+    .add-subject-but button{
+        width:110px;
+        height:50px;
+        font-size:8px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+    }
+    #plus
+    {
+        font-size:23px;
+    }
+    .assign-faculty-list-but button
+    {
+        width:100px;
+        height:50px;
+        font-size:8px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+    }
+    .add-assign-faculty-but button
+    {
+        width:110px;
+        height:50px;
+        font-size:8px;
+        background-color:rgb(242,93,1);
+        border-radius:8px;
+ 
+    }
+    
+    
+
+    table {
+    width:100vw;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: scroll;
+    }
+    
+    th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    word-wrap: break-word; 
+    max-width: 200px; 
+    font-size:15.5px;
+    }
+    .scroll-stop
+    {
+        max-width:95vw;
+        height:auto;
+        overflow:scroll
+    }
+    th {
+    background-color: #f0f0f0;
+    }
+    
+    tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+    }
+    
+    
+    @media (max-width: 768px) {
+    table {
+    font-size: 14px; 
+    }
+    
+    th, td {
+    max-width: none; /
+    }
+    }
+    
+    
+ 
+    
+    
+     input[type="checkbox"]     {
+    width:20px;
+    height:20px;
+    }
+ 
+   
+    .options{
+    
+    }
+}
+    
